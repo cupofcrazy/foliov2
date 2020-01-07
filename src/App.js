@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import Smooth from 'smooth-scrolling'
-import { TimelineMax, Expo } from 'gsap'
+import { gsap, Expo } from 'gsap/dist/gsap'
 /**
  * Components
  */
@@ -41,7 +41,7 @@ const App = () => {
     canvas.create()
 
     // Begin Animations
-    const tl = new TimelineMax({ delay: 1 })
+    const tl = new gsap.timeline({ delay: 1 })
 
     tl.from(headerEl, 1, {
       y: -100,
