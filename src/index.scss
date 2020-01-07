@@ -1,0 +1,40 @@
+//SASS Component files
+@import './assets/scss/variables';
+@import './App.scss';
+@import './components/Header/Header.scss';
+@import './components/Footer/Footer.scss';
+@import './components/Info/Info.scss';
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #111111;
+  --accent-color: #EEEEEE;
+  --secondary-color: #345a42;
+}
+body {
+  position: fixed;
+  overflow: hidden;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--main-color);
+
+  &.change {
+    --main-color: #EEEEEE;
+    --accent-color: #111111;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

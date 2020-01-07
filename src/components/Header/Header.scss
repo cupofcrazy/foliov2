@@ -1,0 +1,32 @@
+header {
+    mix-blend-mode: difference;
+    color: #FFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    padding: $grid-space;
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h1.logo {
+            font-family: $sans-serif;
+            font-size: 1.3rem;
+            font-weight: 100;
+
+            color: var(--accent-color);
+        }
+
+        .circle {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+        }
+    }
+
+}

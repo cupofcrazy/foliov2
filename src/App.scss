@@ -1,0 +1,55 @@
+.App {
+  padding: 0 $grid-space 0 $grid-space;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  z-index: -1;
+}
+
+main {
+  padding: 12em 0 10em 0;
+  overflow: hidden;
+  width: 100%;
+  
+  .wrapper {
+    
+  }
+}
+
+.about {
+  
+  margin: 3em 0 3em 0;
+  h1 {
+    color: var(--accent-color);
+    mix-blend-mode: difference;
+    font-family: $serif;
+    font-weight: 100;
+    font-size: 13vw;
+    // line-height: 0.8;
+    text-transform: uppercase;
+
+    // span {
+    //   font-family: $sans-serif;
+    //   font-size: 2rem;
+    //   font-style: italic;
+    //   color: blue;
+    //   position: relative;
+    //   top: -10px;
+    // }
+  }
+}
+
+#image {
+  position: fixed;
+  top: 0em;
+  left: 0em;
+  img {
+      display: block;
+      position: absolute;
+  }
+}
+
