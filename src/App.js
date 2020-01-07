@@ -83,7 +83,7 @@ const App = () => {
           
           <div className="about">
             <h1>
-              <div>Currently an</div>
+              <div>An</div>
               <div>Independent</div>
               <div>Developer</div>
               <div>with a zeal</div>
