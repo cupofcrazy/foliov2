@@ -36,7 +36,7 @@ const Works = () => {
                     <li>Python<span>Software | Backend</span></li>
                     <li>Kotlin<span>App Development</span></li>
                     <li>Adobe Suite<span>PS, AI, XD, AE</span></li>
-                    <li>Blende 3D</li>
+                    <li>Blender 3D</li>
                     <li>Cinema 4D</li>
                 </ul>
             </section>
