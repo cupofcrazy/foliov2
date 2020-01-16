@@ -1,14 +1,16 @@
 #works {
 
     h1 {
+        display: inline-block;
         mix-blend-mode: difference;
         margin-bottom: .2em;
         color: var(--secondary-color);
         font-family: $serif;
         font-size: 15vw;
         font-weight: 100;
-        border-bottom: 1px solid var(--secondary-color);
-        // text-transform: uppercase;
+        border: 1px solid var(--secondary-color);
+        border-radius: 50%;
+        text-transform: uppercase;
         // -webkit-text-stroke: 0.3px var(--accent-color);
 
         @media screen and (max-width: $screen_sm) {
@@ -27,11 +29,13 @@
 
         h2 {
             display: inline-block;
-            font-size: 1rem;
+            font-size: .8rem;
             font-weight: 100;
-            font-style: italic;
-            border-bottom: 1px solid red;
-            color: red;
+            padding: 1em;
+            // font-style: italic;
+            border: 1px solid var(--secondary-color);
+            border-radius: 50%;
+            color: var(--secondary-color);
             margin: 1em 0;
             mix-blend-mode: difference;
         }

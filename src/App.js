@@ -68,15 +68,17 @@ const App = () => {
     }, .5)
     .staggerFrom(mainEl.querySelectorAll('h1 > div'), 1, {
       autoAlpha: 0,
-      skewX: 3,
+      // skewX: 3,
       transformOrigin: "0%, 50%",
       x: 30,
       webkitFilter: `blur(${ 5 }px)`,
       ease: Expo.easeOut
     }, .1)
     .staggerFrom(document.querySelectorAll('section'), 1, {
-      x: 50,
+      // y: 50,
       autoAlpha: 0,
+      scale: 0.95,
+      webkitFilter: `blur(${ 5 }px)`,
       ease: Expo.easeOut
     }, .3)
     // End Animations
