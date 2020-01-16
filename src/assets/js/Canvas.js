@@ -16,7 +16,8 @@ class Canvas {
 
 
         this.illo = new Zdog.Illustration({
-            element: this.canvas
+            element: this.canvas,
+            // resize: true
         })
         this.hemisphere = null
         this.rotateX = 0
@@ -81,11 +82,11 @@ class Canvas {
             height: Math.floor(window.innerHeight / 4),
             depth: 100,
             stroke: false,
-            color: '#BFBFBF',
-            leftFace: '#989898',
-            rightFace: '#6E6E6E',
-            topFace: '#434343',
-            bottomFace: '#1E1E1E'
+            color: '#232323',
+            leftFace: '#343434',
+            rightFace: '#454545',
+            topFace: '#565656',
+            bottomFace: '#787878'
         })
     
         this.render()

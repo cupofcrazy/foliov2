@@ -5,7 +5,7 @@ const Works = () => {
         <div id="works">
             
             <section className="bio__content">
-                <h1>Bio.</h1>
+                <h1>About</h1>
                 
                 <div className="paragraph">
                     <p>Hi, I'm Tobi</p>

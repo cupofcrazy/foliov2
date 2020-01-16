@@ -1,5 +1,10 @@
 .App {
   padding: 0 $grid-space 0 $grid-space;
+  display: none;
+
+  &.loaded {
+    display: block;
+  }
 }
 
 canvas {
@@ -28,9 +33,13 @@ main {
     mix-blend-mode: difference;
     font-family: $serif;
     font-weight: 100;
-    font-size: 13vw;
+    font-size: 10vw;
     // line-height: 0.8;
     text-transform: uppercase;
+
+    @media screen and (max-width: $screen_sm) {
+      font-size: 1.7rem;
+    }
 
     // span {
     //   font-family: $sans-serif;

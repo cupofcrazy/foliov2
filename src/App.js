@@ -20,6 +20,7 @@ const App = () => {
   // Refs
   let mainEl = useRef(null);
   let canvasEl = useRef(null) 
+  let appEl = useRef(null)
   
 
   // Mounted
@@ -27,6 +28,8 @@ const App = () => {
 
     let headerEl = document.querySelector('header')
     let footerEl = document.querySelector('footer')
+
+    appEl.classList.add('loaded')
 
     const smooth = new Smooth({
       native: false,
@@ -43,14 +46,16 @@ const App = () => {
     // Begin Animations
     const tl = new gsap.timeline({ delay: 1 })
 
-    tl.from(headerEl, 1, {
-      y: -100,
+    
+    tl
+    .from(headerEl, 1, {
+      // y: -100,
       autoAlpha: 0,
       webkitFilter: `blur(${ 5 }px)`,
       ease: Expo.easeOut
     }, 0)
     .from(footerEl, 1, {
-      y: 100,
+      // y: 100,
       autoAlpha: 0,
       webkitFilter: `blur(${ 5 }px)`,
       ease: Expo.easeOut
@@ -61,19 +66,24 @@ const App = () => {
       z: 0,
       ease: Expo.easeInOut
     }, .5)
-    .staggerFrom(mainEl.querySelectorAll('h1 > div'), 2, {
+    .staggerFrom(mainEl.querySelectorAll('h1 > div'), 1, {
       autoAlpha: 0,
-      skewY: 3,
+      skewX: 3,
       transformOrigin: "0%, 50%",
-      y: 100,
+      x: 30,
       webkitFilter: `blur(${ 5 }px)`,
       ease: Expo.easeOut
     }, .1)
+    .staggerFrom(document.querySelectorAll('section'), 1, {
+      x: 50,
+      autoAlpha: 0,
+      ease: Expo.easeOut
+    }, .3)
     // End Animations
   })
 
   return (
-    <div className="App">
+    <div className="App" ref={ el => appEl = el}>
       <canvas id="canvas" ref={ el => canvasEl = el }></canvas>
       <Header />
 
@@ -84,11 +94,10 @@ const App = () => {
           <div className="about">
             <h1>
               <div>An</div>
-              <div>Independent</div>
-              <div>Developer</div>
-              <div>with a zeal</div>
-              <div>for building functional</div>
-              <div>and elegant user interfaces</div>
+              <div>Independent Developer</div>
+              <div>with a zeal for building</div>
+              <div>functional and elegant</div>
+              <div> user interfaces</div>
             </h1>
             
           </div>
