@@ -15,11 +15,14 @@
 :root {
   --main-color: #111111;
   --accent-color: #EEEEEE;
-  --secondary-color: #3246fb;
+  --secondary-color: pink;
+}
+html {
+  
 }
 body {
-  position: fixed;
-  overflow: hidden;
+  width: 100%;
+  height: 100%;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -29,12 +32,17 @@ body {
   background-color: var(--main-color);
 
   &.change {
-    --main-color: #EEEEEE;
+    --main-color: pink;
     --accent-color: #111111;
+    --secondary-color: #111111;
   }
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.mask {
+  overflow: hidden;
 }

@@ -1,5 +1,4 @@
 import React, { useRef, useEffect } from 'react';
-import Smooth from 'smooth-scrolling'
 import { gsap, Expo } from 'gsap/dist/gsap'
 /**
  * Components
@@ -31,17 +30,11 @@ const App = () => {
 
     appEl.classList.add('loaded')
 
-    const smooth = new Smooth({
-      native: false,
-      section: mainEl,
-      ease: 0.1
-    })
-    smooth.init()
 
     
 
-    const canvas = new Canvas({ canvas: canvasEl })
-    canvas.create()
+    // const canvas = new Canvas({ canvas: canvasEl })
+    // canvas.create()
 
     // Begin Animations
     const tl = new gsap.timeline({ delay: 1 })
@@ -60,18 +53,18 @@ const App = () => {
       webkitFilter: `blur(${ 5 }px)`,
       ease: Expo.easeOut
     }, 0)
-    .from(canvas.getObject().scale, 2, {
-      x: 0,
-      y: 0,
-      z: 0,
-      ease: Expo.easeInOut
-    }, .5)
-    .staggerFrom(mainEl.querySelectorAll('h1 > div'), 1, {
+    // .from(canvas.getObject().scale, 2, {
+    //   x: 0,
+    //   y: 0,
+    //   z: 0,
+    //   ease: Expo.easeInOut
+    // }, .5)
+    .staggerFrom(mainEl.querySelectorAll('div > h1'), 1, {
       autoAlpha: 0,
-      // skewX: 3,
+      skewY: 5,
       transformOrigin: "0%, 50%",
-      x: 30,
-      webkitFilter: `blur(${ 5 }px)`,
+      y: '100%',
+      // webkitFilter: `blur(${ 5 }px)`,
       ease: Expo.easeOut
     }, .1)
     .staggerFrom(document.querySelectorAll('section'), 1, {
@@ -95,11 +88,11 @@ const App = () => {
           
           <div className="about">
             <h1>
-              <div>An</div>
-              <div>Independent Developer</div>
-              <div>with a zeal for building</div>
-              <div>functional and elegant</div>
-              <div> user interfaces</div>
+              <div className="mask"><h1>An</h1></div>
+              <div className="mask"><h1>Independent Developer</h1></div>
+              <div className="mask"><h1>with a zeal for building</h1></div>
+              <div className="mask"><h1>functional and elegant</h1></div>
+              <div className="mask"><h1> user interfaces</h1></div>
             </h1>
             
           </div>

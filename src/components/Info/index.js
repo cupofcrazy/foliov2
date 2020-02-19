@@ -9,7 +9,7 @@ const Works = () => {
                 
                 <div className="paragraph">
                     <p>Hi, I'm Tobi</p>
-                    <p>I am currently an aspiring front-end / software engineer.</p>
+                    <p>I am a front-end / software engineer.</p>
                     <p>I get a kick out of designing, building, and delivering effective products.</p>
                     <p>I develop web apps that provide rich & pixel-perfect user interfaces backed with leading technologies</p>
                     <p>Available for opportunities</p>

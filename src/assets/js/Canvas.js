@@ -11,12 +11,17 @@ class Canvas {
         this.canvas = canvas;
         this.canvas.width = window.innerWidth
         this.canvas.height = window.innerHeight
+        this.shapes = []
 
         this.isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
 
 
         this.illo = new Zdog.Illustration({
             element: this.canvas,
+            translate: {
+                x: -this.canvas.width / 2,
+                y: -window.innerHeight / 2
+            }
             // resize: true
         })
         this.hemisphere = null
@@ -69,6 +74,9 @@ class Canvas {
         this.illo.updateRenderGraph()
 
     }
+    getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min) + min)
+    }
     getObject() {
         // console.log(this.illo)
         return this.illo
@@ -76,21 +84,36 @@ class Canvas {
     }
     create() {
         // const colorArray = this.getRandomColors(colors.shapeColors)
-        this.object = new Zdog.Box({
-            addTo: this.illo,
-            width: Math.floor(window.innerWidth / 4),
-            height: Math.floor(window.innerHeight / 4),
-            depth: 100,
-            stroke: false,
-            color: '#232323',
-            leftFace: '#343434',
-            rightFace: '#454545',
-            topFace: '#565656',
-            bottomFace: '#787878'
-        })
+
+        for (let i = 0; i < 8; i++) {
+            for (let j = 0; j < 8; j++) {
+                const shape = new Zdog.Box({
+                    addTo: this.illo,
+                    width: 10,
+                    height: 10,
+                    depth: 10,
+                    translate: {
+                        x: i * 50,
+                        y: j * 50,
+                        // z: this.getRandomInt(0, window.innerWidth),
+                    },
+                    rotate: {
+                        x: this.getRandomInt(-window.innerWidth, window.innerWidth) / 4,
+                        y: this.getRandomInt(-window.innerHeight, window.innerHeight) / 4,
+                    },
+                    stroke: false,
+                    color: '#232323',
+                    leftFace: '#343434',
+                    rightFace: '#454545',
+                    topFace: '#565656',
+                    bottomFace: '#787878'
+                })
+                this.shapes.push(shape)
+            }
+        }
     
         this.render()
-        this.initEvents()
+        // this.initEvents()
 
         return this
         
@@ -101,11 +124,12 @@ class Canvas {
     }
     animate() {
         this.illo.updateRenderGraph()
-
         requestAnimationFrame(() => this.animate() )
-
-        this.illo.rotate.y += 0.01
-        this.illo.rotate.z += 0.01
+        this.shapes.forEach(shape => {
+            shape.rotate.y += 0.01
+            shape.rotate.z += 0.01
+        })
+        
     }
 }
 
