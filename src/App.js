@@ -10,7 +10,7 @@ import Info from './components/Info';
 /**
  * Plugins
  */
-import Canvas from './assets/js/Canvas'
+import mainImage from './assets/images/main.png'
 // End imports
     
 
@@ -20,6 +20,7 @@ const App = () => {
   let mainEl = useRef(null);
   let canvasEl = useRef(null) 
   let appEl = useRef(null)
+  let image = useRef(null)
   
 
   // Mounted
@@ -47,18 +48,20 @@ const App = () => {
       webkitFilter: `blur(${ 5 }px)`,
       ease: Expo.easeOut
     }, 0)
+
     .from(footerEl, 1, {
       // y: 100,
       autoAlpha: 0,
       webkitFilter: `blur(${ 5 }px)`,
       ease: Expo.easeOut
     }, 0)
-    // .from(canvas.getObject().scale, 2, {
-    //   x: 0,
-    //   y: 0,
-    //   z: 0,
-    //   ease: Expo.easeInOut
-    // }, .5)
+    .from(image, 1.5, {
+      scale: 0.5,
+      y: 200,
+      // webkitFilter: `blur(${ 5 }px)`,
+      autoAlpha: 0,
+      ease: Expo.easeInOut
+    }, .3)
     .staggerFrom(mainEl.querySelectorAll('div > h1'), 1, {
       autoAlpha: 0,
       skewY: 5,
@@ -85,7 +88,7 @@ const App = () => {
       
       <main id="js-scroll" ref={ el => mainEl = el }>
         <div className="wrapper">
-          
+          <img className="main_image" src={mainImage} alt="Main" ref={ el => image = el }/>
           <div className="about">
             <h1>
               <div className="mask"><h1>An</h1></div>

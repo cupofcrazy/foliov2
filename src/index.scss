@@ -15,14 +15,14 @@
 :root {
   --main-color: #111111;
   --accent-color: #EEEEEE;
-  --secondary-color: pink;
+  --secondary-color: #F00;
 }
 html {
   
 }
 body {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -32,9 +32,9 @@ body {
   background-color: var(--main-color);
 
   &.change {
-    --main-color: pink;
+    --main-color: #FFF;
     --accent-color: #111111;
-    --secondary-color: #111111;
+    --secondary-color: #F00;
   }
 }
 

@@ -14,7 +14,7 @@ const Header = () => {
             const metaTheme = document.querySelector('meta[name=theme-color]')
             const color = metaTheme.getAttribute('content')
 
-            color === '#111111' ? metaTheme.setAttribute('content', '#DDDDDD') : metaTheme.setAttribute('content', '#111111')
+            color === '#111111' ? metaTheme.setAttribute('content', '#EEE') : metaTheme.setAttribute('content', '#111111')
         })
     })
 

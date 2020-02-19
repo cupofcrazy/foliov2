@@ -52,13 +52,11 @@ main {
   }
 }
 
-#image {
-  position: fixed;
-  top: 0em;
-  left: 0em;
-  img {
-      display: block;
-      position: absolute;
+.main_image {
+  width: 500px;
+
+  @media screen and (max-width: $screen_sm) {
+    width: 100%;
   }
 }
 

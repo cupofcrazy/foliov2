@@ -23,19 +23,19 @@ const Works = () => {
                     <li>Front-end Development</li>
                     <li>Web UI / UX Design</li>
                     <li>Graphic Design</li>
-                    <li>Motion Graphics<span>65%</span></li>
-                    <li>3D Design<span>75%</span></li>
+                    <li>Motion Graphics<span>(65%)</span></li>
+                    <li>3D Design<span>(75%)</span></li>
                 </ul>
             </section>
 
             <section className="tools">
                 <h1>Tools</h1>
                 <ul>
-                    <li>Javascript<span>React, Vue, Node</span></li>
-                    <li>Java <span>Software Development</span></li>
-                    <li>Python<span>Software | Backend</span></li>
-                    <li>Kotlin<span>App Development</span></li>
-                    <li>Adobe Suite<span>PS, AI, XD, AE</span></li>
+                    <li>Javascript<span>(React, Vue, Node)</span></li>
+                    <li>Java <span>(Software Development)</span></li>
+                    <li>Python<span>(Software | Backend)</span></li>
+                    <li>Kotlin<span>(App Development)</span></li>
+                    <li>Adobe Suite<span>(PS, AI, XD, AE)</span></li>
                     <li>Blender 3D</li>
                     <li>Cinema 4D</li>
                 </ul>
