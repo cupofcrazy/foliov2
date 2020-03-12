@@ -15,8 +15,22 @@ const Works = () => {
                     <p>Available for opportunities</p>
                     <p>SUMMER (2020)</p>
                 </div>
-                <h2>WORKS (COMING SOON!)</h2>
             </section>
+            <section className="works">
+                <h1>Works</h1>
+                <h2>Coming Soon</h2>
+                <ul>
+                    <li>Posse Studio Site</li>
+                </ul>
+            </section>
+            <section className="works">
+                <h1>Experiments</h1>
+                <ul>
+                    <li><a href="https://interactive-cubes.netlify.com" target="_blank" rel="noopener noreferrer">Interactive Cubes</a></li>
+                </ul>
+            </section>
+            
+
             <section className="skills">
                 <h1>Skills</h1>
                 <ul>

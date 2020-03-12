@@ -1,18 +1,19 @@
 footer {
-    mix-blend-mode: difference;
+    // mix-blend-mode: difference;
     position: fixed;
     bottom: 0;
     left: 0;
     z-index: 999;
     width: 100%;
     padding: $grid-space;
+    background-color: var(--main-color);
 
     .container {
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
-        padding-bottom: 1em;
-        border-bottom: 1px solid var(--accent-color);
+        padding-bottom: .5em;
+        // border-bottom: 1px solid var(--accent-color);
 
         h1 {
             font-family: $serif;

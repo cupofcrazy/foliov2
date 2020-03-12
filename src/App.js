@@ -45,20 +45,17 @@ const App = () => {
     .from(headerEl, 1, {
       // y: -100,
       autoAlpha: 0,
-      webkitFilter: `blur(${ 5 }px)`,
       ease: Expo.easeOut
     }, 0)
 
     .from(footerEl, 1, {
-      // y: 100,
+      y: 100,
       autoAlpha: 0,
-      webkitFilter: `blur(${ 5 }px)`,
       ease: Expo.easeOut
     }, 0)
     .from(image, 1.5, {
       scale: 0.5,
       y: 200,
-      // webkitFilter: `blur(${ 5 }px)`,
       autoAlpha: 0,
       ease: Expo.easeInOut
     }, .3)
@@ -67,16 +64,14 @@ const App = () => {
       skewY: 5,
       transformOrigin: "0%, 50%",
       y: '100%',
-      // webkitFilter: `blur(${ 5 }px)`,
       ease: Expo.easeOut
     }, .1)
     .staggerFrom(document.querySelectorAll('section'), 1, {
-      // y: 50,
+      y: 75,
       autoAlpha: 0,
       scale: 0.95,
-      webkitFilter: `blur(${ 5 }px)`,
       ease: Expo.easeOut
-    }, .3)
+    }, .15)
     // End Animations
   })
 
