@@ -37,8 +37,8 @@ const Works = () => {
                     <li>Front-end Development</li>
                     <li>Web UI / UX Design</li>
                     <li>Graphic Design</li>
-                    <li>Motion Graphics<span>(65%)</span></li>
-                    <li>3D Design<span>(75%)</span></li>
+                    <li>Motion Graphics</li>
+                    <li>3D Design</li>
                 </ul>
             </section>
 

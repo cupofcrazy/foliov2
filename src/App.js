@@ -43,7 +43,7 @@ const App = () => {
     
     tl
     .from(headerEl, 1, {
-      // y: -100,
+      y: -100,
       autoAlpha: 0,
       ease: Expo.easeOut
     }, 0)
@@ -60,8 +60,7 @@ const App = () => {
       ease: Expo.easeInOut
     }, .3)
     .staggerFrom(mainEl.querySelectorAll('div > h1'), 1, {
-      autoAlpha: 0,
-      skewY: 5,
+      
       transformOrigin: "0%, 50%",
       y: '100%',
       ease: Expo.easeOut
@@ -88,6 +87,7 @@ const App = () => {
             <h1>
               <div className="mask"><h1>An</h1></div>
               <div className="mask"><h1>Independent Developer</h1></div>
+              <div className="mask"><h1>and Designer</h1></div>
               <div className="mask"><h1>with a zeal for building</h1></div>
               <div className="mask"><h1>functional and elegant</h1></div>
               <div className="mask"><h1> user interfaces</h1></div>
