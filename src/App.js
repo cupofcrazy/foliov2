@@ -21,6 +21,7 @@ const App = () => {
   let canvasEl = useRef(null) 
   let appEl = useRef(null)
   let image = useRef(null)
+  let dateEl = useRef(null)
   
 
   // Mounted
@@ -31,9 +32,6 @@ const App = () => {
 
     appEl.classList.add('loaded')
 
-
-    
-
     // const canvas = new Canvas({ canvas: canvasEl })
     // canvas.create()
 
@@ -43,7 +41,6 @@ const App = () => {
     
     tl
     .from(headerEl, 1, {
-      y: -100,
       autoAlpha: 0,
       ease: Expo.easeOut
     }, 0)
@@ -53,9 +50,9 @@ const App = () => {
       autoAlpha: 0,
       ease: Expo.easeOut
     }, 0)
-    .from(image, 1.5, {
-      scale: 0.5,
-      y: 200,
+    .from(dateEl, 1.5, {
+      scaleY: 0,
+      y: 100,
       autoAlpha: 0,
       ease: Expo.easeInOut
     }, .3)
@@ -74,6 +71,9 @@ const App = () => {
     // End Animations
   })
 
+  const date = new Date()
+  const year = date.getFullYear()
+
   return (
     <div className="App" ref={ el => appEl = el}>
       <canvas id="canvas" ref={ el => canvasEl = el }></canvas>
@@ -82,7 +82,9 @@ const App = () => {
       
       <main id="js-scroll" ref={ el => mainEl = el }>
         <div className="wrapper">
-          <img className="main_image" src={mainImage} alt="Main" ref={ el => image = el }/>
+          {/* <img className="main_image" src={mainImage} alt="Main" ref={ el => image = el }/> */}
+          <h2 className="date" ref={ el => dateEl = el }>{ year }</h2>
+
           <div className="about">
             <h1>
               <div className="mask"><h1>An</h1></div>

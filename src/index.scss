@@ -13,9 +13,10 @@
 }
 
 :root {
-  --main-color: #F5F2EE;
-  --accent-color: #252525;
-  --secondary-color: #111;
+  --main-color: #202333;
+  --accent-color: #F5F2EE;
+  --secondary-color: #F5F2EE;
+  
 }
 html {
   
@@ -32,9 +33,9 @@ body {
   background-color: var(--main-color);
 
   &.change {
-    --main-color: #252525;
-    --accent-color: #F5F2EE;
-    --secondary-color: #F5F2EE;
+    --main-color: #F5F2EE;
+    --accent-color: #252525;
+    --secondary-color: #111;
   }
 }
 

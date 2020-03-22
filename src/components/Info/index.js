@@ -45,11 +45,11 @@ const Works = () => {
             <section className="tools">
                 <h1>Tools</h1>
                 <ul>
-                    <li>Javascript<span>(React, Vue, Node)</span></li>
-                    <li>Java <span>(Software Development)</span></li>
-                    <li>Python<span>(Software | Backend)</span></li>
-                    <li>Kotlin<span>(App Development)</span></li>
-                    <li>Adobe Suite<span>(PS, AI, XD, AE)</span></li>
+                    <li>Javascript</li>
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>Kotlin</li>
+                    <li>Adobe Suite</li>
                     <li>Blender 3D</li>
                     <li>Cinema 4D</li>
                 </ul>

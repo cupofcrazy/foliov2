@@ -21,7 +21,7 @@ const Header = () => {
     return (
         <header>
             <nav>
-                <h1 className="logo">INDEX  ({ new Date().getFullYear()})</h1>
+                <h1 className="logo">INDEX</h1>
                 <div className="circle" ref={ el => toggleEl = el }></div>
             </nav>
         </header>
